@@ -15,6 +15,8 @@ import { PageNotFoundComponent } from './page-not-found.component';
 /* Feature Modules */
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -24,6 +26,9 @@ import { MessageModule } from './messages/message.module';
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     UserModule,
     MessageModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   declarations: [

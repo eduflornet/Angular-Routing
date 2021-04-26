@@ -1,12 +1,10 @@
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+
 import { Product } from './product';
-import { InMemoryDbService} from "angular-in-memory-web-api";
 
 export class ProductData implements InMemoryDbService {
-  // createDb(reqInfo?: RequestInfo): {} | Observable<{}> | Promise<{}> {
-  //   throw new Error("Method not implemented.");
-  // }
 
-  createDb() {
+  createDb(): { products: Product[]} {
     const products: Product[] = [
       {
         id: 1,
@@ -68,6 +66,4 @@ export class ProductData implements InMemoryDbService {
     ];
     return { products };
   }
-
-
 }
